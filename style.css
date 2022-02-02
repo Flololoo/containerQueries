@@ -1,3 +1,23 @@
+:root {
+    --text: #17171a;
+    --background: #ffffff;
+    --button-color: #ffe7ff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #ffffff;
+        --background: #17171a;
+        --button-color: #5d4b5d;
+    }
+}
+
+* {
+    color: var(--text);
+}
+body {
+    background-color: var(--background);
+}
+
 .large {
     width: 100%;
 }
@@ -9,15 +29,10 @@
 }
 
 .card {
-    border: 1px solid black;
+    border: 1px solid var(--text);
     container: inline-size / card-wrapper;
     margin: 10px;
     padding: 10px;
-}
-.colorbox {
-    width: 100%;
-    height: 100px;
-    background-color: darkseagreen;
 }
 p {
     margin: 0;
@@ -26,7 +41,7 @@ button {
     border-radius: 0;
     border: unset;
     padding: 10px 15px;
-    background-color: #ffe7ff;
+    background-color: var(--button-color);
     margin-top: 10px;
     text-transform: uppercase;
     cursor: pointer;
